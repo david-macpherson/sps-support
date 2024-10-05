@@ -8,7 +8,7 @@ set -e
 #######                                       #######
 #####################################################
 
-NAMESPACE=""
+COREWEAVE_NAMESPACE=""
 REGION=""
 REST_API_ACCESS_KEY=""
 
@@ -20,10 +20,10 @@ REST_API_ACCESS_KEY=""
 #######                                       #######
 #####################################################
 
-DOMAIN="turn-$REGION.$NAMESPACE.coreweave.cloud"
+DOMAIN="turn-$REGION.$COREWEAVE_NAMESPACE.coreweave.cloud"
 COTURN_CREDENTIAL=`kubectl get configmap sps-coturn -o "jsonpath={.data['credential']}"`
 SECURE_TURN_URI="turns:$DOMAIN?transport=tcp"
-SPS_API_URL=https://api.$NAMESPACE.$REGION.ingress.coreweave.cloud/api
+SPS_API_URL=https://api.$COREWEAVE_NAMESPACE.$REGION.ingress.coreweave.cloud/api
 
 #####################################################
 
@@ -48,7 +48,7 @@ apiVersion: cert-manager.io/v1
 kind: Certificate
 metadata:
   name: sps-coturn-$REGION-tls
-  namespace: $NAMESPACE
+  namespace: $COREWEAVE_NAMESPACE
   labels:
     app.kubernetes.io/name: sps-coturn-$REGION-tls
 spec:
