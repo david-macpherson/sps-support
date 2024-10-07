@@ -115,7 +115,7 @@ Once the command has been run it can take up to 2 mins for the sps-coturn pod to
 
 ### 4. Update the sps-config with the sps-coturn domain
 
-Once the `<REGION>` and `<COREWEAVE_NAMESPACE>` has been obtained and substituted in the following command it can be executed
+Once the `<REGION>`, `<COREWEAVE_NAMESPACE>` and `<REST_API_ACCESS_KEY>` has been obtained and substituted in the following command it can be executed
 
 **Linux**
 ```bash
