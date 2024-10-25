@@ -75,7 +75,7 @@ In order for the application to use secure turn the secure turn will need to be 
 1. When creating/updating an application the secure turn address needs to be added to the list of custom ice servers
 2. Log into the SPS Dashboard
 3. Create or Update an application
-4. Select the `custom ice servers` tab on the left hand side
+4. Select the `Custom Ice Servers` tab on the left hand side
 5. Press the `+` button to add a new entry
 6. In the `URLs` input enter the following value substituting `<REGION>` and `<COREWEAVE_NAMESPACE>`  
 `turns:turn-<REGION>.<COREWEAVE_NAMESPACE>.coreweave.cloud:443?transport=tcp`
