@@ -86,3 +86,11 @@ kubectl get configmap sps-coturn -o "jsonpath={.data['credential']}"
 ```
 
 
+### Further notes on Secure Turn
+If secure TURN is only required then the following is required
+- Only have the `turns:turn-<REGION>.<COREWEAVE_NAMESPACE>.coreweave.cloud:443?transport=tcp` entry in the `Custom Ice Servers`
+- When creating an version disable the turn server
+  - Under the `Advanced` tab
+  - Disable the `Enable TURN Server`
+
+Once the version has been made active the application will only stream using secure TURN
